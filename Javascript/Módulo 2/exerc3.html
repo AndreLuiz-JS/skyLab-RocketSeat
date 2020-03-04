@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo 2 - Exercício 3</title>
+  </head>
+  <body>
+    <!--A partir do seguinte vetor:
+var nomes = ["Diego", "Gabriel", "Lucas"];
+Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+Diegol
+Gabriel
+Lucas -->
+    <ul id="lista"></ul>
+    <script>
+      const nomes = ["Diego", "Gabriel", "Lucas"];
+      const ul = document.querySelector("#lista");
+      for (nome in nomes) {
+        const li = document.createElement("li");
+        li.innerText = nomes[nome];
+        ul.appendChild(li);
+      }
+    </script>
+  </body>
+</html>

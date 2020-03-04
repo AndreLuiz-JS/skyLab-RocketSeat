@@ -1,0 +1,29 @@
+<!-- Crie um botão que ao ser clicado cria um novo elemento em tela com 
+a forma de um quadrado vermelho com 100px de altura e largura.
+Sempre que o botão for clicado um novo quadrado deve aparecer na tela.-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo 2 - Exercício 1 (Gerador de Quadrados)</title>
+  </head>
+  <body>
+    <button onClick="geraQuadrado()">Clique me</button>
+    <div id="result"></div>
+    <script>
+      function geraQuadrado() {
+        const result = document.getElementById("result");
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = "100";
+        canvas.height = "100";
+        canvas.style.border = "5px solid #880000";
+        canvas.style.margin = "5px";
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, 0, 100, 100);
+        result.appendChild(canvas);
+      }
+    </script>
+  </body>
+</html>
